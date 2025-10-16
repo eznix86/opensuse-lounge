@@ -12,6 +12,27 @@
     <link href="https://fonts.bunny.net/css?family=source-sans-3:400,500,600,700" rel="stylesheet" />
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!--- Favicon -->
+    <link rel="shortcut icon" href="/favicon-for-light.ico">
+    <link rel="icon" href="/favicon-for-light.ico">
+    <script>
+      const shortcutIcon = document.querySelector('link[rel="shortcut icon"]');
+      const faviconEl = document.querySelector('link[rel="icon"]');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', (event) => setDarkThemeEnabled(event.matches));
+      function setDarkThemeEnabled(value) {
+        if (value) {
+          shortcutIcon.setAttribute('href', '/favicon-for-dark.ico');
+          faviconEl.setAttribute('href', '/favicon-for-dark.ico');
+        } else {
+          shortcutIcon.setAttribute('href', '/favicon-for-light.ico');
+          faviconEl.setAttribute('href', '/favicon-for-light.ico');
+        }
+      }
+      setDarkThemeEnabled(mediaQuery.matches);
+    </script>
+
 </head>
 <body class="antialiased">
     <div class="min-h-screen flex flex-col relative">    
