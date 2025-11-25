@@ -9,7 +9,6 @@ use RectorLaravel\Rector\Empty_\EmptyToBlankAndFilledFuncRector;
 use RectorLaravel\Set\LaravelSetList;
 
 return static function (RectorConfig $rectorConfig): void {
-
     $rectorConfig->paths([
         __DIR__.'/app',
         __DIR__.'/config',
@@ -31,9 +30,7 @@ return static function (RectorConfig $rectorConfig): void {
         LaravelSetList::LARAVEL_IF_HELPERS,
     ]);
 
-    $rectorConfig->rules([
-        EmptyToBlankAndFilledFuncRector::class,
-    ]);
+    $rectorConfig->rules([EmptyToBlankAndFilledFuncRector::class]);
 
     $rectorConfig->phpVersion(PhpVersion::PHP_84);
 

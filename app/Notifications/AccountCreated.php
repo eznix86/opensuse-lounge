@@ -33,7 +33,7 @@ class AccountCreated extends Notification
      */
     public function toMail(object $notifiable): MailMessage
     {
-        return (new MailMessage)
+        return new MailMessage()
             ->subject('Your account has been created')
             ->markdown('mail.new-account-created', [
                 'email' => $notifiable->email,
