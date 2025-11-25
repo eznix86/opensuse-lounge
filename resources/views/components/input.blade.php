@@ -30,7 +30,7 @@
             ['class' => 
                 'bg-card block w-full px-4 py-2 border rounded-lg shadow-sm transition-colors duration-200 focus:ring-2 focus:ring-accent focus:border-accent ' 
                 . ($error ? 'border-danger focus:ring-danger focus:border-danger' : 'border-default') 
-                . ' text-primary placeholder-muted'
+                . ' text-primary placeholder-muted/50'
             ]) 
         }}
     >
