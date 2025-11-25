@@ -37,7 +37,7 @@ class Member extends Model
      * Scope a query to search members by username, email, or libera nick.
      */
     #[Scope]
-    public function search(Builder $query, ?string $search): void
+    protected function search(Builder $query, ?string $search): void
     {
         $query->when($search, function (Builder $q, $search) {
             $q->whereFullText(
