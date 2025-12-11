@@ -1,0 +1,19 @@
+services:
+    mysql:
+        image: mariadb:11
+        environment:
+            MARIADB_ROOT_HOST: "%"
+            MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: "yes"
+        healthcheck:
+            test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+
+    dev:
+      image: opensuse-lounge:dev
+      command: ["php", "artisan", "octane:start", "--server=frankenphp", "--port=8081"]
+      env_file:
+        - .env.docker
+      ports:
+        - 8081:8081
+      healthcheck:
+        test: ["CMD", "healthcheck-octane"]
+        start_period: 10s
