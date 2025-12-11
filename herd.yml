@@ -1,5 +1,5 @@
 name: opensuse-lounge
-php: '8.4'
+php: '8.5'
 secured: true
 aliases:
     - opensuse-lounge.test
