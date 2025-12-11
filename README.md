@@ -63,7 +63,7 @@ Update the .env file with your database credentials and any other required confi
 > **New to PHP? Start here:**
 >
 > **Option 1: php.new (Windows, Mac, Linux)**
-> - One-line command to install PHP 8.4, Composer, and Laravel
+> - One-line command to install PHP 8.5, Composer, and Laravel
 > - Fast setup for complete beginners
 > - [Visit php.new](https://php.new/)
 > - After installation, use Compose for database/email (see below)
@@ -78,7 +78,7 @@ Update the .env file with your database credentials and any other required confi
 >
 > **Option 3: Compose**
 > - Use your existing PHP installation
-> - Provides MySQL 8.4 and Mailpit for email testing
+> - Provides MySQL 8.5 and Mailpit for email testing
 > - Run: `docker compose up -d`
 >
 > **Experienced Laravel Developer?**
