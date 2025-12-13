@@ -31,7 +31,7 @@ class PasswordChangeController extends Controller
 
         $user->markEmailAsVerified();
 
-        return redirect()->route('members.index')
+        return to_route('members.index')
             ->with('success', 'Password changed successfully!');
     }
 }

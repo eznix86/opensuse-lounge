@@ -45,7 +45,7 @@ class MemberController
     {
         $member = Member::query()->create($request->validated());
 
-        return redirect()->route('members.show', $member)
+        return to_route('members.show', $member)
             ->with('success', 'Member created successfully.');
     }
 
@@ -76,7 +76,7 @@ class MemberController
     {
         $member->update($request->validated());
 
-        return redirect()->route('members.show', $member)
+        return to_route('members.show', $member)
             ->with('success', 'Member updated successfully.');
     }
 
@@ -89,7 +89,7 @@ class MemberController
 
         $member->delete();
 
-        return redirect()->route('members.index')
+        return to_route('members.index')
             ->with('success', 'Member deleted successfully.');
     }
 }

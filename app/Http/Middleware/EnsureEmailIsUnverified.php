@@ -18,7 +18,7 @@ class EnsureEmailIsUnverified
     public function handle(Request $request, Closure $next): Response
     {
         if ($request->user() && $request->user()->hasVerifiedEmail()) {
-            return redirect()->route('members.index');
+            return to_route('members.index');
         }
 
         return $next($request);
