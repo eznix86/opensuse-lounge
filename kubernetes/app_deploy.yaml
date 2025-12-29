@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: lounge
   labels:
     app: lounge
-    name: lounge
 spec:
   replicas: 2
   selector:
